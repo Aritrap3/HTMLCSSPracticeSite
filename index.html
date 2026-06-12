@@ -1,1 +1,208 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML/CSS Workbook Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific styles */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 300%;
+            font-family: monospace;
+            color: rgb(17, 45, 78);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 120%;
+            font-family: monospace;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .domain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 40px 40px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .domain-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: black;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, transform 0.2s;
+            display: block;
+        }
+
+        .domain-card:hover {
+            background-color: rgb(17, 45, 78);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .domain-card:hover .domain-subtitle {
+            color: rgb(186, 255, 230);
+        }
+
+        .domain-card h2 {
+            font-family: monospace;
+            font-size: 130%;
+            margin: 0 0 8px 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .domain-subtitle {
+            font-family: monospace;
+            font-size: 95%;
+            color: rgb(60, 60, 60);
+            margin: 0;
+        }
+
+        .domain-number {
+            font-family: monospace;
+            font-size: 85%;
+            font-weight: bold;
+            color: rgb(17, 45, 78);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .domain-card:hover .domain-number {
+            color: rgb(186, 255, 230);
+        }
+
+        footer {
+            text-align: center;
+            font-family: monospace;
+            font-size: 90%;
+            color: rgb(50, 50, 50);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <ul>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 1</a>
+            <div class="dropdown-content">
+                <a href="Domain 1/MusicStore1/11a-scripts.html">11a - Scripts</a>
+                <a href="Domain 1/MusicStore1/11c-scripts.html">11c - Scripts</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 2</a>
+            <div class="dropdown-content">
+                <a href="Domain 2/MusicStore2/21a-index.html">21a - Index</a>
+                <a href="Domain 2/MusicStore2/21b-index.html">21b - Index</a>
+                <a href="Domain 2/MusicStore2/22a-index.html">22a - Index</a>
+                <a href="Domain 2/MusicStore2/23a-spotlight.html">23a - Spotlight</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 3</a>
+            <div class="dropdown-content">
+                <a href="Domain 3/MusicStore3/index.html">Index</a>
+                <a href="Domain 3/MusicStore3/31b-index.html">31b - Index</a>
+                <a href="Domain 3/MusicStore3/32a-spotlight.html">32a - Spotlight</a>
+                <a href="Domain 3/MusicStore3/34a-contactus.html">34a - Contact</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 4</a>
+            <div class="dropdown-content">
+                <a href="Domain 4/Student/MusicStore4/index.html">Index</a>
+                <a href="Domain 4/Student/MusicStore4/41a-instruments.html">41a - Instruments</a>
+                <a href="Domain 4/Student/MusicStore4/42-canvas.html">42 - Canvas</a>
+                <a href="Domain 4/Student/MusicStore4/43a-media.html">43a - Media</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 5</a>
+            <div class="dropdown-content">
+                <a href="Domain 5/MusicStore5/index.html">Index</a>
+                <a href="Domain 5/MusicStore5/51a-positioningexample.html">51a - Positioning</a>
+                <a href="Domain 5/MusicStore5/52a-books.html">52a - Books</a>
+                <a href="Domain 5/MusicStore5/54a-index.html">54a - Index</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">DOMAIN 6</a>
+            <div class="dropdown-content">
+                <a href="Domain 6/index.html">Index</a>
+                <a href="Domain 6/hours-complete.html">Hours</a>
+                <a href="Domain 6/contactus-complete.html">Contact Us</a>
+                <a href="Domain 6/hierarchy.html">Hierarchy</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>HTML/CSS Workbook Practice</h1>
+        <p>Choose a domain below to explore your HTML &amp; CSS work. Each section links to real project files.</p>
+    </div>
+
+    <!-- Domain Cards -->
+    <div class="domain-grid">
+
+        <a href="Domain 1/MusicStore1/11a-scripts.html" class="domain-card">
+            <span class="domain-number">DOMAIN 1</span>
+            <h2>Page Structure &amp; Scripts</h2>
+            <p class="domain-subtitle">HTML document structure, tags, and basic scripting.</p>
+        </a>
+
+        <a href="Domain 2/MusicStore2/21a-index.html" class="domain-card">
+            <span class="domain-number">DOMAIN 2</span>
+            <h2>CSS Styling</h2>
+            <p class="domain-subtitle">Selectors, colors, fonts, and styling elements with CSS.</p>
+        </a>
+
+        <a href="Domain 3/MusicStore3/index.html" class="domain-card">
+            <span class="domain-number">DOMAIN 3</span>
+            <h2>Page Layout</h2>
+            <p class="domain-subtitle">Building multi-page sites with navigation, links, and layout.</p>
+        </a>
+
+        <a href="Domain 4/Student/MusicStore4/index.html" class="domain-card">
+            <span class="domain-number">DOMAIN 4</span>
+            <h2>Media &amp; Graphics</h2>
+            <p class="domain-subtitle">Images, audio, video, canvas, and SVG graphics.</p>
+        </a>
+
+        <a href="Domain 5/MusicStore5/index.html" class="domain-card">
+            <span class="domain-number">DOMAIN 5</span>
+            <h2>Positioning &amp; Display</h2>
+            <p class="domain-subtitle">CSS positioning, flexbox, grids, and responsive layouts.</p>
+        </a>
+
+        <a href="Domain 6/index.html" class="domain-card">
+            <span class="domain-number">DOMAIN 6</span>
+            <h2>Advanced CSS</h2>
+            <p class="domain-subtitle">Transitions, specificity, hierarchy, and complete site builds.</p>
+        </a>
+
+    </div>
+
+    <footer>
+        Created for HTML/CSS Certification Exam Prep &nbsp;|&nbsp; Hosted on GitHub Pages
+    </footer>
+
+</body>
+</html>
